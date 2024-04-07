@@ -1,0 +1,23 @@
+<script>
+    function hello()
+    {
+
+    }
+
+   
+    /* 
+     function name is treated as an object
+     when we create an function then js also give us an empty object that can be accessed by hello name 
+     and it is called prototype
+     only function provide prototype property.not object , array and string
+
+
+    */
+    console.log(hello.name);
+    console.log(typeof hello);
+    hello.myownproperty="myownproperty this is";
+    console.log(hello.myownproperty); 
+   
+    hello.prototype.abc="abc"
+    console.log("3" ,hello.prototype);
+</script>

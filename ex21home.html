@@ -1,0 +1,26 @@
+<script>
+    class CreateUser{
+
+        constructor(firstName , age){
+          this.firstName=firstName;
+          this.age=age
+        }
+
+        about(){
+          console.log(`name is ${this.firstName} and age is ${this.age}`);
+        }
+        is18(){
+            if(this.age>18){
+                console.log("eligibal for vote");
+            }else{
+                console.log(" not eligibal for vote");
+            }
+        }
+    }
+
+    const user1=new CreateUser("Danish" ,21);
+    user1.about()
+    user1.is18()
+    console.log("1" ,Object.getPrototypeOf(user1));
+    console.log("2" ,typeof user1);
+</script>

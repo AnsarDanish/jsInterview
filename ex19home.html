@@ -1,0 +1,42 @@
+<script>
+    // new keyword
+    // it is called constructor function
+    // how u tell this is constructor function means you have to call by new keyword
+    function CreateUser(firstName ,age)
+    {
+        // let this =Object.create(createUser.prototype)
+        this.firstName=firstName;
+        this.age=age;
+        // return this
+    }
+    CreateUser.prototype.about=function()
+    {
+        console.log(`Name is ${this.firstName} and age is ${this.age}`);
+    }
+
+  let user1=  new CreateUser("harshit" ,6);
+  console.log("1" ,user1);
+  let user2={firstName:"danish" , age:20}
+  console.log("2" ,user2);
+  console.log("3" ,user1.prototype);
+
+  for(let key in user1)
+  {
+     console.log("4",key);
+     if(user1.hasOwnProperty(key))
+     {
+        console.log("5" ,key);
+     }
+
+  }
+  
+  /* 
+    new keyword work:-
+    1)create an empty object--  {}  and that empty object is referd by this
+    2) it returns this object after adding keys
+    3) it sets proto in this object
+  
+  */
+
+
+</script>

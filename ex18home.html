@@ -1,0 +1,40 @@
+<script>
+/*     const userMethods={
+    is18:function(){
+        if(this.age>18)
+          console.log("user is eligibal for vote")
+        else
+        console.log("not elgibal for vote");
+    }
+} */
+
+// adding is18 method in createuser prototype
+function createUser(name , age)
+{
+    let obj=Object.create(createUser.prototype)
+    // let obj = Object.create(userMethods) in obj from this line proto will be set that will refer userMethods
+    // benefit will be u have to not add manullay if u add any method in userMethods
+    obj.name=name;
+    obj.age=age;
+    obj.about=function(){
+        console.log(`user name is ${this.name} and age is ${age}`);
+    }
+  //  obj.is18=userMethods.is18
+    return obj
+}
+
+createUser.prototype.is18=function(){
+    if(this.age>18)
+        console.log("user is eligibal for vote")
+        else
+        console.log("not elgibal for vote");
+
+}
+const user1=createUser("Danish","25");
+user1.about()
+user1.is18()
+console.log("4" ,createUser.prototype);
+console.log("3" ,user1);
+//createUser.prototype.is18(user1)
+
+</script>

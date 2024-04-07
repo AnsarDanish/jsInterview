@@ -1,0 +1,17 @@
+<script>
+    let num1=[1,2,3];
+    let num2=new Array(1,2,3);
+
+    console.log("1" ,num2);
+    console.log("2" ,Array.prototype);
+    console.log("3" ,Object.getPrototypeOf(num2));
+    function hello()
+    {
+        console.log("hello world");
+    }
+    console.log("4" ,hello.prototype);
+    hello.prototype=[];
+    hello.prototype.push(1)
+    console.log("5" ,hello.prototype);
+    
+</script>

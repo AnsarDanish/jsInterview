@@ -1,0 +1,29 @@
+<script>
+    /* call apply and bind method */
+
+    function details(favourateFood,hobby){
+    console.log(`person name is ${this.firstName} and age is ${this.age} and ${favourateFood} hobyy ${hobby}`);
+ }
+    const person={
+    firstName:"Danish Ansari",
+    age:8,
+    about:function(hobby){
+        console.log(`person name is ${this.firstName} and age is ${this.age} and hobby ${hobby}`,this);
+    }
+ }
+
+ const person2={
+    firstName:"Hazim",
+    age:10,
+    paly(){
+      console.log("I am playing");
+    }
+ }
+ person.about.call(person2,"Playing") // when u use call method then u must to mention this keyword
+ details.call(person2,"chicken","sleeping")
+ details.apply(person2,["roti","sleeping"]);
+ const func= details.bind(person2,"Tandoori","Taking bath") // it will not print . it returns function
+ func()
+
+
+</script>

@@ -1,0 +1,41 @@
+<!-- january ,febuary  7:40 -->
+<script>
+    console.log("1");
+    console.log("2");
+    
+ const person={
+    firstName:"Danish Ansari",
+    age:8,
+    about:function(){
+        console.log(`person name is ${this.firstName} and age is ${this.age}`,this);
+    }
+ }
+
+ function details(){
+    console.log(`person name is ${this.firstName} and age is ${this.age}`);
+ }
+
+ const person2={
+    firstName:"Hazim",
+    age:10,
+    about:details
+ }
+ const person3={
+    firstName:"Haris",
+    age:14,
+    about:details
+ }
+ const person4={
+    firstName:"Asim",
+    age:12,
+    about:details
+ }
+
+
+
+ person.about()
+ person2.about()
+ person3.about()
+ person4.about()
+
+</script>

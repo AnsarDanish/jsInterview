@@ -1,0 +1,59 @@
+<script>
+    class Animal{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    isSuperCute(){
+        if(this.age<1){
+            return "it is super cute";
+        }else{
+            return "it is not super cute"
+        }
+    }
+
+    isCute(){
+        return "animal is cute";
+    }
+}
+
+class Dog extends Animal{
+    constructor(name,age,speed){
+        super(name,age);
+        this.speed=speed
+    }
+
+    // getter and setter
+    get aboutt(){
+        console.log(`name is ${this.name} and age is ${this.age}`);
+    }
+    set details(name){
+     this.name=name
+    }
+
+    isCute(){
+        return "animal is cute and modified isCute";
+    }
+
+    run(){
+        return ` ${this.name} is running at ${this.speed}`
+    }
+
+}
+const tommy=new Dog("tommay" ,0.5,50)
+console.log("1" ,tommy.isCute());
+console.log("2" ,tommy.isSuperCute());
+console.log("3" ,tommy);
+console.log("4" ,tommy.run());
+
+const animal = new Animal("animal1" ,2,60)
+console.log("5" , animal);
+console.log("6" , animal.isCute());
+//console.log("7" ,animal.run()); // error
+tommy.details="riyaa";
+
+console.log("8" , tommy.aboutt);
+
+
+
+</script>
